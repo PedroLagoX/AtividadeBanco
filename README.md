@@ -22,11 +22,16 @@ Os dados precisam ser salvos no banco de dados.
 
 **Tecnologias:**
 -ORM: SQLAlchemy
+
 -Banco de dados: MySQL
+
 -Containerização: Docker
+
 -Orquestração de contêineres: Docker Compose
 
 **Observação:**
 -Os testes devem verificar os dados informados.
+
 -As exceções deve tratadas e exibidas para o usuário sem parar a execução do programa.
+
 -Utilize branches para versionamento.
