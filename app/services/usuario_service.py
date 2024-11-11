@@ -38,4 +38,4 @@ class UsuarioService:
             raise ValueError("Usuário não encontrado para atualização")
 
     def listar_todos_usuarios(self):
-        return self.repository.listar_usuarios()
+        return self.repository.listar_usuario()
