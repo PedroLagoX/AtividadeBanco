@@ -18,6 +18,8 @@ class UsuarioRepository:
         self.session.commit()
         self.session.refresh(usuario)
 
+    def buscar_por_id(self, usuario_id):
+        return self.session.query(Usuario).filter(Usuario.id == usuario_id).first()
     
     def listar_usuario(self):
         return self.session.query(Usuario).all()
