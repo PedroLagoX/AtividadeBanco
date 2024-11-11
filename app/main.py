@@ -10,12 +10,12 @@ def main():
 
     while True:
         print("---|SENAI-2024|---")
-        print("1|Adicionar Usuário")
-        print("2|Pesquisar Usuário")
-        print("3|Atualizar Usuário")
-        print("4|Excluir Usuário")
-        print("5|Exibir todos os  Usuários")
-        print("0|Sair")
+        print("1 | Adicionar usuário")
+        print("2 | Pesquisar usuário")
+        print("3 | Atualizar usuário")
+        print("4 | Excluir usuário")
+        print("5 | Exibir todos os usuários")
+        print("0 | Sair")
         opcao=input("Selecione a opção: ")
        
         match opcao:
@@ -73,7 +73,7 @@ def main():
             case "4":
                 print("Excluindo usuário")
                 try:
-                    usuario_id = int(input("Digite o ID do usuário a ser excluído: "))
+                    usuario_id = int(input("Insira o ID do usuário a ser excluído: "))
                     usuario=service.repository.excluir_usuario(usuario_id)
                     print("Usuário excluido com sucesso")
                 except ValueError:
