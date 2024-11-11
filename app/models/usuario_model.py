@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Integer
 from sqlalchemy.orm import declarative_base
-from config.database import db
+from app.config.database import db
 
 Base = declarative_base()
 
@@ -17,4 +17,19 @@ class Usuario(Base):
         self.email = email
         self.senha = senha
 
+        if not nome:
+            raise ValueError("O nome está vazio.")
+        if not isinstance(nome, str):
+            raise TypeError("O nome está invalido")
+
+        if not email:
+            raise ValueError("O email está vazio")
+        if not isinstance(email, str):
+            raise TypeError("O email está invalido")  
+        
+        if not senha:
+            raise ValueError("A senha está vazia")
+        if not isinstance(senha, str):
+            raise TypeError("A senha está inválida") 
+        
 Base.metadata.create_all(bind=db)
